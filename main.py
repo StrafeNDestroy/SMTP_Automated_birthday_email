@@ -21,7 +21,8 @@ if today_tuple in birthdays_dict:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
 # Sending of Letter and altered contents
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+# smtp email address smtp.gmail.com
+    with smtplib.SMTP("YOUR SENDING SMTP EMAIL ADDRESS") as connection:
         connection.starttls()
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
